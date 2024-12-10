@@ -1,4 +1,5 @@
 
+import Controllers.MenuController;
 import Materia.Queues.Queue;
 import Materia.Queues.QueueGeneric;
 import Materia.Queues.Stacks.Stack;
@@ -14,6 +15,8 @@ public class App {
         runStackGeneric();
         runQueue();
         runQueueGeneric();
+        MenuController menuController = new MenuController();
+        menuController.showMenu();
 
     }
 
