@@ -64,4 +64,10 @@ public class MenuController {
         contactManager.deleteContactByName(name);
         consoleView.showMessage("deleted contact");
     }
+
+    private void printList(){
+        consoleView.showMessage("Lista");
+        contactManager.printList();
+        consoleView.showMessage("======");
+    }
 }

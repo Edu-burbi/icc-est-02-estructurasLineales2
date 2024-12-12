@@ -11,10 +11,9 @@ public class App {
 
         System.out.println("\n");
         System.out.println("********************************Estructuras Lineales********************************");  // Titulo del programa
-        runStack();
-        runStackGeneric();
-        runQueue();
-        runQueueGeneric();
+        //runStack();
+        //runStackGeneric();
+        //();
         MenuController menuController = new MenuController();
         menuController.showMenu();
 
