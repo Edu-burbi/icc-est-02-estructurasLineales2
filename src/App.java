@@ -1,10 +1,15 @@
+//import Controllers.MenuController;
+//import Materia.Queues.Queue;
+//import Materia.Queues.QueueGeneric;
+//import Materia.Queues.Stacks.Stack;
+//import Materia.Queues.Stacks.StackGeneric;
+//import Models.Pantalla;
 
-import Controllers.MenuController;
-import Materia.Queues.Queue;
-import Materia.Queues.QueueGeneric;
-import Materia.Queues.Stacks.Stack;
-import Materia.Queues.Stacks.StackGeneric;
-import Models.Pantalla;
+import Materia.Ejercicio_01_sign.SignValidator;
+import Materia.Ejercicio_02_sorting.StackSorter;
+
+import java.util.Scanner;
+import java.util.Stack; 
 
 public class App {
     public static void main(String[] args) {
@@ -14,12 +19,55 @@ public class App {
         //runStack();
         //runStackGeneric();
         //();
-        MenuController menuController = new MenuController();
-        menuController.showMenu();
+        //MenuController menuController = new MenuController();
+        //menuController.showMenu();
 
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("---- Ejercicio 1: Validación de Signos ----");
+        SignValidator signValidator = new SignValidator();
+
+        System.out.print("Ingresa una cadena con signos (Ejemplo: ([]){}) para validar: ");        // Pedir al usuario que ingrese una cadena para validar
+        String input = scanner.nextLine(); 
+
+        // Validar la cadena ingresada
+        boolean resultado = signValidator.validarSignos(input);
+        System.out.println("Resultado: " + resultado);  // Imprimir si la cadena está es valida o no 
+
+        System.out.println("\n---- Ejercicio 2: Ordenar una Pila ----");
+        Stack<Integer> stack = new Stack<>();
+
+        System.out.print("Ingresa el número de elementos para la pila: ");        // Pedir al usuario que ingrese los números para la pila
+        int n = scanner.nextInt();  
+        System.out.println("Ingresa los " + n + " números:");
+
+        for (int i = 0; i < n; i++) {
+            System.out.print("Elemento " + (i + 1) + ": ");
+            stack.push(scanner.nextInt());  
+        }
+
+        // Mostrar la pila original
+        System.out.println("\nPila original:");
+        for (int num : stack) {
+            System.out.println(num);
+        }
+
+        // Ordenar la pila usando StackSorter
+        StackSorter stackSorter = new StackSorter();
+        stackSorter.ordenarStack(stack);
+
+        // Mostrar la pila ordenada
+        System.out.println("\nPila ordenada ascendentemente:");
+        while (!stack.isEmpty()) {
+            System.out.println(stack.pop());
+        }
+
+        scanner.close();  
     }
+}
 
-    public static void runStack() {
+
+    /*public static void runStack() {
         
         // Instanciar la clase
 
@@ -135,3 +183,5 @@ public class App {
     
     }
 }
+*/
+

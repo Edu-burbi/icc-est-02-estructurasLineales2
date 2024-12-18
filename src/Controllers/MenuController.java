@@ -61,8 +61,13 @@ public class MenuController {
 
     private void deleteContact() {
         String name = consoleView.getInput("Name contact to delete: ");
-        contactManager.deleteContactByName(name);
-        consoleView.showMessage("deleted contact");
+        boolean isDeleted = contactManager.deleteContactByName(name);           // Agregue una variable de tipo booleano para que verifique verdadero y falso 
+
+        if (!isDeleted){
+            System.out.println("Contact not found");
+        }else{
+            System.out.println("Deleted contact");
+        }
     }
 
     private void printList(){
