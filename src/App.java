@@ -1,27 +1,30 @@
-//import Controllers.MenuController;
-//import Materia.Queues.Queue;
-//import Materia.Queues.QueueGeneric;
-//import Materia.Queues.Stacks.Stack;
-//import Materia.Queues.Stacks.StackGeneric;
-//import Models.Pantalla;
+/*import Controllers.MenuController;
+import Materia.Queues.Queue;
+import Materia.Queues.QueueGeneric;
+import Materia.Queues.Stacks.Stack;
+import Materia.Queues.Stacks.StackGeneric;
+import Models.Pantalla;
+*/
 
-import Materia.Ejercicio_01_sign.SignValidator;
-import Materia.Ejercicio_02_sorting.StackSorter;
+// Comentar las importaciones de los demas ejercicios
 
 import java.util.Scanner;
-import java.util.Stack; 
+import java.util.Stack;
+import Ejercicio_01_sign.SignValidator;
+import Ejercicio_02_sorting.StackSorter; 
 
 public class App {
     public static void main(String[] args) {
 
-        System.out.println("\n");
-        System.out.println("********************************Estructuras Lineales********************************");  // Titulo del programa
-        //runStack();
-        //runStackGeneric();
-        //();
-        //MenuController menuController = new MenuController();
-        //menuController.showMenu();
-
+        System.out.println("\n********************************Estructuras Lineales********************************");  // Titulo del programa
+    /*  runStack();
+        runStackGeneric();
+        runQueue(); 
+        runQueueGeneric();
+        MenuController menuController = new MenuController();
+        menuController.showMenu();
+    */
+    
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("---- Ejercicio 1: Validación de Signos ----");
@@ -66,8 +69,8 @@ public class App {
     }
 }
 
-
-    /*public static void runStack() {
+/* 
+    public static void runStack() {
         
         // Instanciar la clase
 

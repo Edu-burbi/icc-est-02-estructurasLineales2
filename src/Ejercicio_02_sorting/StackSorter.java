@@ -1,4 +1,4 @@
-package Materia.Ejercicio_02_sorting;
+package Ejercicio_02_sorting;
 
 import java.util.Stack; 
 
